@@ -1,0 +1,57 @@
+$backgroundBody: white;
+$backgroundWrapper: #7a7a7a;
+$borderBlocks: #eee7e7;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+body {
+  background-color: $backgroundBody;
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    position: relative;
+    max-width: 1920px;
+    width: 100vw;
+    max-height: 940px;
+    height: 100vh;
+    background-color: $backgroundWrapper;
+    margin: 0 auto;
+    .header {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid $borderBlocks;
+      :nth-child(2) {
+        border-left: 1px solid $borderBlocks;
+        border-right: 1px solid $borderBlocks;
+      }
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      :nth-child(2),
+      :nth-child(5) {
+        border-left: 1px solid $borderBlocks;
+        border-right: 1px solid $borderBlocks;
+      }
+      div:nth-child(-n + 3) {
+        border-bottom: 1px solid $borderBlocks;
+      }
+    }
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid $borderBlocks;
+      :nth-child(2) {
+        border-left: 1px solid $borderBlocks;
+        border-right: 1px solid $borderBlocks;
+      }
+    }
+  }
+}
