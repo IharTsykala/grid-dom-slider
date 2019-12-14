@@ -1,6 +1,8 @@
 $backgroundBody: white;
 $backgroundWrapper: #7a7a7a;
 $borderBlocks: #eee7e7;
+$paddingNavigation: 62px;
+$paddingNavigationLI: 40px;
 
 * {
   margin: 0;
@@ -25,10 +27,24 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       border-bottom: 1px solid $borderBlocks;
-      :nth-child(2) {
+      nav {
         border-left: 1px solid $borderBlocks;
         border-right: 1px solid $borderBlocks;
       }
+    }
+    .header-navigation ul {
+      padding: 0 $paddingNavigation;
+      text-align: center;
+      list-style-type: none;
+    }
+
+    .header-navigation ul li {
+      display: inline;
+      padding-right: $paddingNavigationLI;
+    }
+
+    .header-navigation ul li:last-child {
+      padding-right: 0;
     }
 
     .main {

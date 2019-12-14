@@ -24,9 +24,21 @@ body .wrapper .header {
   grid-template-columns: repeat(3, 1fr);
   border-bottom: 1px solid #eee7e7;
 }
-body .wrapper .header :nth-child(2) {
+body .wrapper .header nav {
   border-left: 1px solid #eee7e7;
   border-right: 1px solid #eee7e7;
+}
+body .wrapper .header-navigation ul {
+  padding: 0 62px;
+  text-align: center;
+  list-style-type: none;
+}
+body .wrapper .header-navigation ul li {
+  display: inline;
+  padding-right: 40px;
+}
+body .wrapper .header-navigation ul li:last-child {
+  padding-right: 0;
 }
 body .wrapper .main {
   display: grid;
