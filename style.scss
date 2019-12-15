@@ -3,13 +3,15 @@ $backgroundWrapper: #7a7a7a;
 $borderBlocks: #9e9d9d;
 $paddingNavigation: 62px;
 $paddingRightNavigationLI: 40px;
-$logoMenuTextPaddingLeftRight: 70px;
+$logoMenuTextPaddingLeftRight: 9%;
 $SearchMenuPaddingRight: 60px;
 $contentHeaderPaddingTop: 45px;
 $mainPaddingText: 100px;
 $textColor: white;
 $hoverColor: red;
+$hoverColorOdd: blue;
 $footerTextMarginTop: 190px;
+$opacity: 0.3;
 
 * {
   margin: 0;
@@ -32,6 +34,7 @@ body {
     background-color: $backgroundWrapper;
     margin: 0 auto;
     background-image: url("assets/img/pattern.jpg");
+    background-size: 100% 100%;
     .header {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -46,10 +49,16 @@ body {
       padding-top: $contentHeaderPaddingTop;
     }
     .header_navigation ul {
-      padding: 0 $paddingNavigation;
+      padding: $contentHeaderPaddingTop $paddingNavigation;
       text-align: center;
       list-style-type: none;
-      padding-top: $contentHeaderPaddingTop;
+
+      @media (max-width: 1860px) {
+        padding: $contentHeaderPaddingTop $paddingNavigation/4;
+      }
+      @media (max-width: 900px) {
+        display: none;
+      }
     }
 
     .header_navigation ul li {
@@ -64,6 +73,18 @@ body {
       }
       &:last-child {
         padding-right: 0;
+      }
+      @media (max-width: 1600px) {
+        padding-right: $paddingRightNavigationLI/2;
+      }
+      @media (max-width: 1400px) {
+        font-size: 12px;
+      }
+      @media (max-width: 1200px) {
+        padding-right: $paddingRightNavigationLI/3;
+      }
+      @media (max-width: 1024px) {
+        font-size: 10px;
       }
     }
 
@@ -91,10 +112,25 @@ body {
       div:nth-child(-n + 3) {
         border-bottom: 1px solid $borderBlocks;
       }
+      div:nth-child(even):hover {
+        background-color: $hoverColor;
+        opacity: $opacity;
+      }
+      div:nth-child(odd):hover {
+        background-color: $hoverColorOdd;
+        opacity: $opacity;
+      }
       div {
         h3 {
           margin-left: $logoMenuTextPaddingLeftRight;
           margin-top: $mainPaddingText;
+          @media (max-width: 840px) {
+            font-size: 12px;
+          }
+          @media (max-width: 740px) {
+            text-align: center;
+            margin-left: 0;
+          }
         }
       }
     }
@@ -110,14 +146,23 @@ body {
         opacity: 0.3;
         margin-top: $footerTextMarginTop;
         margin-left: $logoMenuTextPaddingLeftRight;
-        // &:nth-child(3) {
-        //   float: right;
-        // }
+        @media (max-width: 740px) {
+          margin-left: $logoMenuTextPaddingLeftRight/3;
+          font-size: 10px;
+        }
       }
       & div:last-child p {
         float: right;
-        margin-right: $SearchMenuPaddingRight;
+        margin-right: $logoMenuTextPaddingLeftRight;
+        @media (max-width: 740px) {
+          margin-right: $logoMenuTextPaddingLeftRight/3;
+        }
       }
+    }
+    @media (max-width: 320px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 1fr);
+      display: none;
     }
   }
 }
