@@ -7,6 +7,7 @@
 
 body {
   background-color: white;
+  color: white;
 }
 body .wrapper {
   display: grid;
@@ -18,15 +19,16 @@ body .wrapper {
   height: 100vh;
   background-color: #7a7a7a;
   margin: 0 auto;
+  background-image: url("assets/img/pattern.jpg");
 }
 body .wrapper .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid #eee7e7;
+  border-bottom: 1px solid #9e9d9d;
 }
 body .wrapper .header nav {
-  border-left: 1px solid #eee7e7;
-  border-right: 1px solid #eee7e7;
+  border-left: 1px solid #9e9d9d;
+  border-right: 1px solid #9e9d9d;
 }
 body .wrapper .header_logo {
   padding-left: 70px;
@@ -70,24 +72,33 @@ body .wrapper .main {
 }
 body .wrapper .main :nth-child(2),
 body .wrapper .main :nth-child(5) {
-  border-left: 1px solid #eee7e7;
-  border-right: 1px solid #eee7e7;
+  border-left: 1px solid #9e9d9d;
+  border-right: 1px solid #9e9d9d;
 }
 body .wrapper .main div:nth-child(-n+3) {
-  border-bottom: 1px solid #eee7e7;
+  border-bottom: 1px solid #9e9d9d;
 }
-body .wrapper .main div h4 {
+body .wrapper .main div h3 {
   margin-left: 70px;
   margin-top: 100px;
 }
 body .wrapper .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid #eee7e7;
+  border-top: 1px solid #9e9d9d;
 }
 body .wrapper .footer :nth-child(2) {
-  border-left: 1px solid #eee7e7;
-  border-right: 1px solid #eee7e7;
+  border-left: 1px solid #9e9d9d;
+  border-right: 1px solid #9e9d9d;
+}
+body .wrapper .footer div p {
+  opacity: 0.3;
+  margin-top: 190px;
+  margin-left: 70px;
+}
+body .wrapper .footer div:last-child p {
+  float: right;
+  margin-right: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

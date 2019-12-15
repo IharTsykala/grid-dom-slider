@@ -1,12 +1,15 @@
 $backgroundBody: white;
 $backgroundWrapper: #7a7a7a;
-$borderBlocks: #eee7e7;
+$borderBlocks: #9e9d9d;
 $paddingNavigation: 62px;
 $paddingRightNavigationLI: 40px;
 $logoMenuTextPaddingLeftRight: 70px;
 $SearchMenuPaddingRight: 60px;
 $contentHeaderPaddingTop: 45px;
 $mainPaddingText: 100px;
+$textColor: white;
+$hoverColor: red;
+$footerTextMarginTop: 190px;
 
 * {
   margin: 0;
@@ -17,6 +20,7 @@ $mainPaddingText: 100px;
 
 body {
   background-color: $backgroundBody;
+  color: $textColor;
   .wrapper {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
@@ -27,11 +31,11 @@ body {
     height: 100vh;
     background-color: $backgroundWrapper;
     margin: 0 auto;
+    background-image: url("assets/img/pattern.jpg");
     .header {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       border-bottom: 1px solid $borderBlocks;
-      // padding-top: $contentHeaderPaddingTop;
       nav {
         border-left: 1px solid $borderBlocks;
         border-right: 1px solid $borderBlocks;
@@ -52,10 +56,10 @@ body {
       display: inline;
       padding-right: $paddingRightNavigationLI;
       a {
-        color: white;
+        color: $textColor;
         text-decoration: none;
         &:hover {
-          color: red;
+          color: $hoverColor;
         }
       }
       &:last-child {
@@ -71,7 +75,7 @@ body {
         margin-right: $logoMenuTextPaddingLeftRight/2;
       }
       &:hover {
-        background-color: red;
+        background-color: $hoverColor;
       }
     }
 
@@ -88,7 +92,7 @@ body {
         border-bottom: 1px solid $borderBlocks;
       }
       div {
-        h4 {
+        h3 {
           margin-left: $logoMenuTextPaddingLeftRight;
           margin-top: $mainPaddingText;
         }
@@ -101,6 +105,18 @@ body {
       :nth-child(2) {
         border-left: 1px solid $borderBlocks;
         border-right: 1px solid $borderBlocks;
+      }
+      div p {
+        opacity: 0.3;
+        margin-top: $footerTextMarginTop;
+        margin-left: $logoMenuTextPaddingLeftRight;
+        // &:nth-child(3) {
+        //   float: right;
+        // }
+      }
+      & div:last-child p {
+        float: right;
+        margin-right: $SearchMenuPaddingRight;
       }
     }
   }
