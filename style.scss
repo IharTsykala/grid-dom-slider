@@ -2,7 +2,11 @@ $backgroundBody: white;
 $backgroundWrapper: #7a7a7a;
 $borderBlocks: #eee7e7;
 $paddingNavigation: 62px;
-$paddingNavigationLI: 40px;
+$paddingRightNavigationLI: 40px;
+$logoMenuTextPaddingLeftRight: 70px;
+$SearchMenuPaddingRight: 60px;
+$contentHeaderPaddingTop: 45px;
+$mainPaddingText: 100px;
 
 * {
   margin: 0;
@@ -27,24 +31,48 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       border-bottom: 1px solid $borderBlocks;
+      // padding-top: $contentHeaderPaddingTop;
       nav {
         border-left: 1px solid $borderBlocks;
         border-right: 1px solid $borderBlocks;
       }
     }
-    .header-navigation ul {
+    .header_logo {
+      padding-left: $logoMenuTextPaddingLeftRight;
+      padding-top: $contentHeaderPaddingTop;
+    }
+    .header_navigation ul {
       padding: 0 $paddingNavigation;
       text-align: center;
       list-style-type: none;
+      padding-top: $contentHeaderPaddingTop;
     }
 
-    .header-navigation ul li {
+    .header_navigation ul li {
       display: inline;
-      padding-right: $paddingNavigationLI;
+      padding-right: $paddingRightNavigationLI;
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+          color: red;
+        }
+      }
+      &:last-child {
+        padding-right: 0;
+      }
     }
 
-    .header-navigation ul li:last-child {
-      padding-right: 0;
+    .header_search-menu img {
+      float: right;
+      margin-right: $logoMenuTextPaddingLeftRight;
+      margin-top: $contentHeaderPaddingTop;
+      &:last-child {
+        margin-right: $logoMenuTextPaddingLeftRight/2;
+      }
+      &:hover {
+        background-color: red;
+      }
     }
 
     .main {
@@ -58,6 +86,12 @@ body {
       }
       div:nth-child(-n + 3) {
         border-bottom: 1px solid $borderBlocks;
+      }
+      div {
+        h4 {
+          margin-left: $logoMenuTextPaddingLeftRight;
+          margin-top: $mainPaddingText;
+        }
       }
     }
     .footer {

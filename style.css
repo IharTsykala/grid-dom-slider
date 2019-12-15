@@ -28,17 +28,40 @@ body .wrapper .header nav {
   border-left: 1px solid #eee7e7;
   border-right: 1px solid #eee7e7;
 }
-body .wrapper .header-navigation ul {
+body .wrapper .header_logo {
+  padding-left: 70px;
+  padding-top: 45px;
+}
+body .wrapper .header_navigation ul {
   padding: 0 62px;
   text-align: center;
   list-style-type: none;
+  padding-top: 45px;
 }
-body .wrapper .header-navigation ul li {
+body .wrapper .header_navigation ul li {
   display: inline;
   padding-right: 40px;
 }
-body .wrapper .header-navigation ul li:last-child {
+body .wrapper .header_navigation ul li a {
+  color: white;
+  text-decoration: none;
+}
+body .wrapper .header_navigation ul li a:hover {
+  color: red;
+}
+body .wrapper .header_navigation ul li:last-child {
   padding-right: 0;
+}
+body .wrapper .header_search-menu img {
+  float: right;
+  margin-right: 70px;
+  margin-top: 45px;
+}
+body .wrapper .header_search-menu img:last-child {
+  margin-right: 35px;
+}
+body .wrapper .header_search-menu img:hover {
+  background-color: red;
 }
 body .wrapper .main {
   display: grid;
@@ -52,6 +75,10 @@ body .wrapper .main :nth-child(5) {
 }
 body .wrapper .main div:nth-child(-n+3) {
   border-bottom: 1px solid #eee7e7;
+}
+body .wrapper .main div h4 {
+  margin-left: 70px;
+  margin-top: 100px;
 }
 body .wrapper .footer {
   display: grid;
