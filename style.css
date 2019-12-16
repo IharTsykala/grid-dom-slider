@@ -95,6 +95,9 @@ body .wrapper .header_search-menu img:last-child {
 body .wrapper .header_search-menu img:hover {
   background-color: red;
 }
+body .wrapper .header_mobile {
+  display: none;
+}
 body .wrapper .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -163,7 +166,41 @@ body .wrapper .footer div:last-child p {
 @media (max-width: 320px) {
   body .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: 240px 1440px 240px;
+    background-image: none;
+    background-color: white;
+    max-height: 100%;
+  }
+  body .wrapper .header {
+    background-image: url("assets/img/pattern.jpg");
+    background-size: 100% 100%;
+    display: none;
+  }
+  body .wrapper .header div,
+body .wrapper .header nav {
+    display: none;
+  }
+  body .wrapper .header div:last-child {
+    display: grid;
+  }
+  body .wrapper .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 240px);
+    display: none;
+  }
+  body .wrapper .main div:nth-child(-n+6) {
+    border: none;
+  }
+  body .wrapper .main div:nth-child(odd) {
+    background-color: #7474ff;
+  }
+  body .wrapper .main div:nth-child(even) {
+    background-color: #ff7474;
+  }
+  body .wrapper .footer {
+    grid-template-columns: 1fr;
+  }
+  body .wrapper .footer div:nth-child(-n+3) {
     display: none;
   }
 }

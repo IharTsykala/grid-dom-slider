@@ -12,6 +12,7 @@ $hoverColor: red;
 $hoverColorOdd: blue;
 $footerTextMarginTop: 190px;
 $opacity: 0.3;
+$mobileHeight: 240px;
 
 * {
   margin: 0;
@@ -100,6 +101,10 @@ body {
       }
     }
 
+    .header_mobile {
+      display: none;
+    }
+
     .main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -161,8 +166,42 @@ body {
     }
     @media (max-width: 320px) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(8, 1fr);
-      display: none;
+      grid-template-rows: $mobileHeight ($mobileHeight * 6) $mobileHeight;
+      background-image: none;
+      background-color: white;
+      max-height: 100%;
+      .header {
+        background-image: url("assets/img/pattern.jpg");
+        background-size: 100% 100%;
+        display: none;
+      }
+      .header div,
+      .header nav {
+        display: none;
+      }
+      .header div:last-child {
+        display: grid;
+      }
+      .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, $mobileHeight);
+        display: none;
+        div:nth-child(-n + 6) {
+          border: none;
+        }
+        div:nth-child(odd) {
+          background-color: rgb(116, 116, 255);
+        }
+        div:nth-child(even) {
+          background-color: rgb(255, 116, 116);
+        }
+      }
+      .footer {
+        grid-template-columns: 1fr;
+        div:nth-child(-n + 3) {
+          display: none;
+        }
+      }
     }
   }
 }
