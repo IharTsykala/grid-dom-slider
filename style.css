@@ -9,6 +9,11 @@ body {
   background-color: white;
   color: white;
 }
+body .h1 {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
 body .wrapper {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
@@ -247,6 +252,11 @@ body .wrapper .footer div:last-child {
   body .wrapper .footer .footer-mobile div a {
     text-decoration: none;
     color: black;
+  }
+}
+@media (max-width: 320px) {
+  body .h1 {
+    display: none;
   }
 }
 
