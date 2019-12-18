@@ -9,9 +9,9 @@
   <body>
     <h1 class="h1"></h1>
     <div class="wrapper">
-      <div class="menu">
+      <div id="menu" class="menu-container">
         <h2>There will be a menu</h2>
-        <button id="closeMenu" class="menu_close-menu">close</button>
+        <button id="closeMenu" class="close-menu">close</button>
       </div>
       <header class="header">
         <div>
@@ -27,7 +27,12 @@
           </ul>
         </nav>
         <div class="header_search-menu">
-          <img src="assets/img/menu.png" alt="menu" />
+          <img
+            id="startMenu"
+            class="header_menu"
+            src="assets/img/menu.png"
+            alt="menu"
+          />
           <img src="assets/img/search.png" alt="search" />
         </div>
         <div class="header_mobile">

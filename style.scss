@@ -42,7 +42,7 @@ body {
     background-color: $backgroundWrapper;
     background-image: url("assets/img/pattern.jpg");
     background-size: 100% 100%;
-    .menu {
+    .menu-container {
       position: absolute;
       display: none;
       grid-template-rows: 24px 24px 1fr;
@@ -51,7 +51,7 @@ body {
       height: 100%;
       background: $backgroundMenu;
       color: black;
-      .menu_close-menu {
+      .close-menu {
         width: 15%;
       }
     }

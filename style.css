@@ -27,7 +27,7 @@ body .wrapper {
   background-image: url("assets/img/pattern.jpg");
   background-size: 100% 100%;
 }
-body .wrapper .menu {
+body .wrapper .menu-container {
   position: absolute;
   display: none;
   grid-template-rows: 24px 24px 1fr;
@@ -37,7 +37,7 @@ body .wrapper .menu {
   background: #d6d6d6;
   color: black;
 }
-body .wrapper .menu .menu_close-menu {
+body .wrapper .menu-container .close-menu {
   width: 15%;
 }
 body .wrapper .header {
