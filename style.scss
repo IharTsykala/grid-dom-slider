@@ -1,6 +1,7 @@
-$backgroundBody: white;
-$backgroundWrapper: #7a7a7a;
+$backgroundBody: 7a7a7a;
+$backgroundWrapper: rgb(255, 164, 164);
 $borderBlocks: #9e9d9d;
+$backgroundMenu: rgb(214, 214, 214);
 $paddingNavigation: 62px;
 $paddingRightNavigationLI: 40px;
 $logoMenuTextPaddingLeftRight: 9%;
@@ -37,10 +38,23 @@ body {
     width: 100vw;
     max-height: 940px;
     height: 100vh;
-    background-color: $backgroundWrapper;
     margin: 0 auto;
+    background-color: $backgroundWrapper;
     background-image: url("assets/img/pattern.jpg");
     background-size: 100% 100%;
+    .menu {
+      position: absolute;
+      display: none;
+      grid-template-rows: 24px 24px 1fr;
+      justify-self: end;
+      width: 33.3%;
+      height: 100%;
+      background: $backgroundMenu;
+      color: black;
+      .menu_close-menu {
+        width: 15%;
+      }
+    }
     .header {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
