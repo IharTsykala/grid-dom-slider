@@ -42,7 +42,7 @@ body .wrapper .menu-container .close-menu {
 }
 body .wrapper .search-container {
   position: absolute;
-  display: grid;
+  display: none;
   grid-template-rows: 24px 24px 1fr;
   justify-self: end;
   width: 100%;
