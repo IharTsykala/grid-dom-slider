@@ -40,6 +40,21 @@ body .wrapper .menu-container {
 body .wrapper .menu-container .close-menu {
   width: 15%;
 }
+body .wrapper .search-container {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 24px 24px 1fr;
+  justify-self: end;
+  width: 100%;
+  height: 100%;
+  background: #d6d6d6;
+  color: black;
+  justify-content: end;
+}
+body .wrapper .search-container .close-search {
+  justify-self: end;
+  width: 25%;
+}
 body .wrapper .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
