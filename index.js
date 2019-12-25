@@ -1,3 +1,13 @@
+const url =
+  "https://api.openweathermap.org/data/2.5/weather?id=625144&appid=019911fb81dd7e07a0e2713f736acb34"
+const f = async () => {
+  let promise = await fetch(url)
+  let response = await promise
+  console.log((await response.json()).name)
+}
+
+f()
+
 const menu = document.getElementById("menu")
 const startMenu = document.getElementById("startMenu")
 const closeMenu = document.getElementById("closeMenu")
